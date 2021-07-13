@@ -42,11 +42,8 @@ public class PlayerShootingHandler : MonoBehaviour
     {
       if(Time.time >= (lastFireTime + fireDelay))
         {
-            Debug.Log("Time="+ Time.time);
-            Debug.Log("last shot" + lastFireTime + fireDelay);
-
             lastFireTime = Time.time;
-            GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject newBullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z-1), transform.rotation);
             newBullet.GetComponent<Rigidbody>().velocity = new Vector3(shotDierction.x * bulletVelocity, shotDierction.y * bulletVelocity, 0);
         }
 
