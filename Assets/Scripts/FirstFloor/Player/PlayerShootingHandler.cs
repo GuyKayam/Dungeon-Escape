@@ -15,31 +15,44 @@ public class PlayerShootingHandler : MonoBehaviour
 
     float lastFireTime;
 
+    Vector2 shootingDirection;
+    bool isBtnDown = false;
+
     // Start is called before the first frame update
     void Start()
-    {
-        Physics.IgnoreCollision(this.GetComponent<Collider>(), bullet.GetComponent<Collider>());
-    }
+    {    }
 
-    public void OnShootInput(float vertical, float horizontal)
+    public void OnBtnDown(float vertical, float horizontal)
     {
         if ((vertical!=0 || horizontal!=0) && Time.time >= lastFireTime + fireDelay)
         {
-
-            Shoot(vertical, horizontal);
+            Debug.Log("Pressing");
+            shootingDirection = new Vector2(vertical, horizontal);
+            isBtnDown = true;
         }
     }
 
-
-    void Shoot(float vertical, float horizontal)
+    public void OnBtnUp()
     {
+        Debug.Log("NotPRessing");
+
+        isBtnDown = false;
+    }
+
+
+    void Shoot(Vector2 shotDierction)
+    {
+      
         GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-        newBullet.GetComponent<Rigidbody>().velocity = new Vector3(vertical * bulletVelocity, horizontal * bulletVelocity, 0);
+        newBullet.GetComponent<Rigidbody>().velocity = new Vector3(shotDierction.x * bulletVelocity, shotDierction.y * bulletVelocity, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isBtnDown)
+        {
+            Shoot(shootingDirection);
+        }
     }
 }

@@ -9,12 +9,16 @@ public class MoveInputEvent : UnityEvent<float, float> { }
 [System.Serializable]
 public class ShootInputEvent : UnityEvent<float, float> { }
 
+[System.Serializable]
+public class ShootInputStopped : UnityEvent { }
+
 public class InputController : MonoBehaviour
 {
     Controls controls;
 
     public MoveInputEvent moveInputEvent;
     public ShootInputEvent shootInputEvent;
+    public ShootInputStopped shootInputStopped;
 
 
     private void Awake()
@@ -28,7 +32,9 @@ public class InputController : MonoBehaviour
         controls.GamePlay.Move.performed += OnMovePerformed;
         controls.GamePlay.Move.canceled += OnMovePerformed;
         //controls.GamePlay.Shoot.performed += OnShootformed;
-        controls.GamePlay.Shoot.started += OnShootformed;
+        controls.GamePlay.Shoot.started += OnShootingBtnPressed;
+        controls.GamePlay.Shoot.canceled += OnShootingBtnPressed;
+
 
         //controls.GamePlay.Shoot.canceled += OnShootformed;
     }
@@ -39,10 +45,14 @@ public class InputController : MonoBehaviour
         moveInputEvent.Invoke(movementInput.x, movementInput.y);
     }
 
-    private void OnShootformed(InputAction.CallbackContext context)
+    private void OnShootingBtnPressed(InputAction.CallbackContext context)
     {
         Vector2 shootingInput = context.ReadValue<Vector2>();
         shootInputEvent.Invoke(shootingInput.x, shootingInput.y);
+    }
+    private void OnShootingBtnPressed()
+    {
+        shootInputStopped.Invoke();
     }
 
 

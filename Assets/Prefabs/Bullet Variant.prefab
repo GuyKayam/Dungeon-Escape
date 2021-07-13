@@ -11,9 +11,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7865574631921093248, guid: f575aabddd967d54ca5cddab6b1aef92, type: 3}
+    - target: {fileID: 8097662606580171661, guid: d1b33c562dc41104da0a637cfbf4fff6, type: 3}
+      propertyPath: destroyTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8097662606580171661, guid: d1b33c562dc41104da0a637cfbf4fff6, type: 3}
+      propertyPath: destructionTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8297566435529679716, guid: d1b33c562dc41104da0a637cfbf4fff6, type: 3}
       propertyPath: m_Name
       value: Bullet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297566435529679716, guid: d1b33c562dc41104da0a637cfbf4fff6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8297566435529679736, guid: d1b33c562dc41104da0a637cfbf4fff6, type: 3}
       propertyPath: m_RootOrder

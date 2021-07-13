@@ -6,10 +6,14 @@ public class BulletHandler : MonoBehaviour
 {
     [SerializeField]
     GameObject player;
+
+    [SerializeField]
+    float destroyTimer=5;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject,1);
+
+        Destroy(gameObject, destroyTimer);
 
     }
 
