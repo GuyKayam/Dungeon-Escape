@@ -32,8 +32,8 @@ public class InputController : MonoBehaviour
         controls.GamePlay.Move.performed += OnMovePerformed;
         controls.GamePlay.Move.canceled += OnMovePerformed;
         //controls.GamePlay.Shoot.performed += OnShootformed;
-        controls.GamePlay.Shoot.started += OnShootingBtnPressed;
-        controls.GamePlay.Shoot.canceled += OnShootingBtnPressed;
+        controls.GamePlay.Shoot.performed += OnShootingBtnPressed;
+        controls.GamePlay.Shoot.canceled += OnShootingBtnReleased;
 
 
         //controls.GamePlay.Shoot.canceled += OnShootformed;
@@ -50,7 +50,7 @@ public class InputController : MonoBehaviour
         Vector2 shootingInput = context.ReadValue<Vector2>();
         shootInputEvent.Invoke(shootingInput.x, shootingInput.y);
     }
-    private void OnShootingBtnPressed()
+    private void OnShootingBtnReleased(InputAction.CallbackContext context)
     {
         shootInputStopped.Invoke();
     }

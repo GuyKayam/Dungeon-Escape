@@ -9,7 +9,7 @@ public class PlayerShootingHandler : MonoBehaviour
     [SerializeField]
     float bulletVelocity=10;
     [SerializeField]
-    float fireDelay=1f;
+    float fireDelay=0f;
     [SerializeField]
     float attackDamage;
 
@@ -24,9 +24,8 @@ public class PlayerShootingHandler : MonoBehaviour
 
     public void OnBtnDown(float vertical, float horizontal)
     {
-        if ((vertical!=0 || horizontal!=0) && Time.time >= lastFireTime + fireDelay)
+        if (vertical!=0 || horizontal!=0)
         {
-            Debug.Log("Pressing");
             shootingDirection = new Vector2(vertical, horizontal);
             isBtnDown = true;
         }
@@ -34,7 +33,6 @@ public class PlayerShootingHandler : MonoBehaviour
 
     public void OnBtnUp()
     {
-        Debug.Log("NotPRessing");
 
         isBtnDown = false;
     }
@@ -42,9 +40,16 @@ public class PlayerShootingHandler : MonoBehaviour
 
     void Shoot(Vector2 shotDierction)
     {
-      
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-        newBullet.GetComponent<Rigidbody>().velocity = new Vector3(shotDierction.x * bulletVelocity, shotDierction.y * bulletVelocity, 0);
+      if(Time.time >= (lastFireTime + fireDelay))
+        {
+            Debug.Log("Time="+ Time.time);
+            Debug.Log("last shot" + lastFireTime + fireDelay);
+
+            lastFireTime = Time.time;
+            GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+            newBullet.GetComponent<Rigidbody>().velocity = new Vector3(shotDierction.x * bulletVelocity, shotDierction.y * bulletVelocity, 0);
+        }
+
     }
 
     // Update is called once per frame
