@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletHandler : MonoBehaviour
+public class PlayerBulletHandler : MonoBehaviour
 {
     [SerializeField]
     GameObject player;
@@ -26,6 +26,6 @@ public class BulletHandler : MonoBehaviour
         // Update is called once per frame
         void Update()
     {
-        
+        //
     }
 }
