@@ -29,5 +29,6 @@ public class PlayerBulletHandler : BulletLogic
 
     protected override void OnTriggerEnter(Collider other)
     {
+        Destroy(gameObject);
     }
 }

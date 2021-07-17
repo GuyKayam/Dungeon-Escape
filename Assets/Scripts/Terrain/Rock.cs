@@ -9,25 +9,6 @@ public class Rock : Terrain
     [SerializeField]
     int size;
 
- 
-
-
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    protected void OnTriggerEnter(Collider other)
-    {
-
-
-    }
     protected void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
@@ -56,13 +37,13 @@ public class Rock : Terrain
         switch (size)
         {
             case 3:
-                smallerRock = (GameObject)Resources.Load("Prefabs/RockSize2");
+                smallerRock = (GameObject)Resources.Load("Prefabs/Terrain/RockSize2");
                 break;
             case 2:
-                smallerRock = (GameObject)Resources.Load("Prefabs/RockSize1");
+                smallerRock = (GameObject)Resources.Load("Prefabs/Terrain/RockSize1");
                 break;
             default:
-                smallerRock = (GameObject)Resources.Load("Prefabs/RockSize1");
+                smallerRock = (GameObject)Resources.Load("Prefabs/Terrain/RockSize1");
                 break;
         }
      
