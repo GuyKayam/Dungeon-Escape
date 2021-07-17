@@ -11,7 +11,7 @@ public class TerrainFactory : CommonFactory
     GameObject[] terrainObjects;  
     public override GenerationObject GenerateObjects(string ObjectTypeByName)
     {
-        foreach(ObjectsByName)
+       // foreach(ObjectsByName)
 
 
 
