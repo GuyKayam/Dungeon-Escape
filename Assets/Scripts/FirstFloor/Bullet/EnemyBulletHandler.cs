@@ -6,15 +6,16 @@ public class EnemyBulletHandler : BulletLogic
 {
     [SerializeField]
     Player playerScript;
-    private void OnTriggerEnter(Collider other)
+
+    protected override void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.layer);
         Destroy(gameObject);
-        if (other.gameObject.layer== LayerMask.NameToLayer("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             playerScript.ChangeHealth(-1);
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,4 +27,7 @@ public class EnemyBulletHandler : BulletLogic
     {
         
     }
+
+
+    
 }

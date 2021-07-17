@@ -6,8 +6,8 @@ public class Player : MonoBehaviour ,IHealth
     [SerializeField]
     UIHandlerFloor1 uiHandler;
 
-    int startHealth=4;
-    int currentHealth=4;
+    int startHealth=5;
+    int currentHealth=5;
     int maxHealth=7;
     public int StartHealth { get => startHealth; set => startHealth = value; }
     public int CurrentHealth { get => currentHealth; set { if (value >= 0) { currentHealth = value; } } }

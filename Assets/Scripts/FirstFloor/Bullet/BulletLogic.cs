@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletLogic : MonoBehaviour
+public abstract class BulletLogic : MonoBehaviour
 {
-
     [SerializeField]
-    float destroyTimer = 5;
+    private float destroyTimer=4;
+
+    public float DestroyTimer
+    {
+        get { return destroyTimer; }
+        set { destroyTimer = value; }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +20,9 @@ public class BulletLogic : MonoBehaviour
         Destroy(gameObject, destroyTimer);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        Destroy(gameObject);
-    }
+    protected abstract void OnTriggerEnter(Collider other);
+
+
 
 }
