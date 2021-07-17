@@ -13,7 +13,7 @@ public class GenerateRoom : MonoBehaviour
     void Start()
     {
         terrainFactoryScript.IntializeFactory(typeof(Terrain));
-        terrainFactoryScript.GenerateObject("Rock");
+        terrainFactoryScript.GenerateObjects("Rock");
     }
 
     // Update is called once per frame
