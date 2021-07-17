@@ -16,7 +16,7 @@ public abstract class AbstractFactory : MonoBehaviour
     public bool IsIntialized { get; set; } = false;
 
     public abstract void IntializeFactory(Type type);
-    public abstract GenerationObject GenerateObject(string ObjectTypeByName);
+    public abstract GenerationObject GenerateObjects(string ObjectTypeByName);
     public abstract IEnumerable<GenerationObject> GetObjectsName();
 
 }

@@ -29,7 +29,7 @@ public class CommonFactory : AbstractFactory
         }
 
     }
-    public override GenerationObject GenerateObject(string ObjectTypeByName)
+    public override GenerationObject GenerateObjects(string ObjectTypeByName)
     {
         if (ObjectsByName.ContainsKey(ObjectTypeByName))
         {

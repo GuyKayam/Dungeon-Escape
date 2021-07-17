@@ -9,7 +9,7 @@ public class TerrainFactory : CommonFactory
 {
     [SerializeField]
     GameObject[] terrainObjects;  
-    public override GenerationObject GenerateObject(string ObjectTypeByName)
+    public override GenerationObject GenerateObjects(string ObjectTypeByName)
     {
         foreach(ObjectsByName)
 
