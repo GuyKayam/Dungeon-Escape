@@ -125,5 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cba5a635473a3d4ab027e4c2960c380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   destroyTimer: 2
+  bulletDamage: 5
+  player: {fileID: 0}

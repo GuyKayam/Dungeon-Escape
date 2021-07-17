@@ -7,7 +7,7 @@ public class Rock : Terrain
     public override string Name => "Rock";
 
     [SerializeField]
-    int size = 3;
+    int size;
 
  
 
@@ -15,10 +15,7 @@ public class Rock : Terrain
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -41,12 +38,15 @@ public class Rock : Terrain
 
     public override void ChangeHealth(int changeInHP)
     {
-        currentHealth += changeInHP;
-        if (currentHealth <= 0 && size != 1)
+        currentHealth -= changeInHP;
+        if (currentHealth <= 0)
         {
-            CreateSmallerRock(size);
+            if (size > 1)
+            {
+                CreateSmallerRock(size);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
 
     }
 

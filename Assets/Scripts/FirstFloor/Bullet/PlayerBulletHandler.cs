@@ -7,7 +7,6 @@ public class PlayerBulletHandler : BulletLogic
     [SerializeField]
     GameObject player;
 
-    [SerializeField]
     // Start is called before the first frame update
     void Start()
     {

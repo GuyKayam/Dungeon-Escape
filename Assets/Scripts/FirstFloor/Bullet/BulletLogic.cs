@@ -7,6 +7,7 @@ public abstract class BulletLogic : MonoBehaviour
     [SerializeField]
     private float destroyTimer=4;
 
+    [SerializeField]
     private int bulletDamage;
 
     public int BulletDamage
