@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBulletHandler : BulletLogic
 {
     [SerializeField]
-    Player playerScript;
+    PlayerStats playerScript;
 
     protected override void OnTriggerEnter(Collider other)
     {

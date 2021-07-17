@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour ,IHealth
+public class PlayerStats : MonoBehaviour ,IHealth
 {
     [SerializeField]
     UIHandlerFloor1 uiHandler;

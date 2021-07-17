@@ -8,7 +8,7 @@ public class UIHandlerFloor1 : MonoBehaviour
     [SerializeField]
     GameObject heartContainer;
     [SerializeField]
-    Player playerScript;
+    PlayerStats playerScript;
     GameObject[] heartContainersArr;
     [SerializeField]
     Transform parentPanel;

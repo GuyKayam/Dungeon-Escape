@@ -18,7 +18,7 @@ public class TerrainFactory : CommonFactory
 
         if (ObjectsByName.ContainsKey(ObjectTypeByName))
         {
-            Debug.Log(ObjectTypeByName);
+       //     Debug.Log(ObjectTypeByName);
             return null;
         }
         return null;

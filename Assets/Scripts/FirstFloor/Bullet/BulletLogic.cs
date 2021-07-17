@@ -7,6 +7,14 @@ public abstract class BulletLogic : MonoBehaviour
     [SerializeField]
     private float destroyTimer=4;
 
+    private int bulletDamage;
+
+    public int BulletDamage
+    {
+        get { return bulletDamage; }
+        set { bulletDamage = value; }
+    }
+
     public float DestroyTimer
     {
         get { return destroyTimer; }

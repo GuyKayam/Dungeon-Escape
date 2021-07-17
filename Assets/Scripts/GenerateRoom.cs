@@ -12,8 +12,8 @@ public class GenerateRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        terrainFactoryScript.IntializeFactory(typeof(Terrain));
-        terrainFactoryScript.GenerateObjects("Rock");
+     //   terrainFactoryScript.IntializeFactory(typeof(Terrain));
+      //  terrainFactoryScript.GenerateObjects("Rock");
     }
 
     // Update is called once per frame

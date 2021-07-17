@@ -2,25 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IHealth
-{
-    [SerializeField]
-    int StartHealth
-    {
-        get;
-        set;
-    }
-
-    int CurrentHealth
-    {
-        get;
-        set;
-    }
-
-    void ChangeHealth(int changeInHP);
-}
-
-public class HPSystem : MonoBehaviour
+public class Ihealth : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
