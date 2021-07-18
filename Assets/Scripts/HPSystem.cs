@@ -17,7 +17,7 @@ interface IHealth
         set;
     }
 
-    void ChangeHealth(int changeInHP);
+   public void ChangeHealth(int changeInHP);
 }
 
 public class HPSystem : MonoBehaviour

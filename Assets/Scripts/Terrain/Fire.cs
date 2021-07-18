@@ -12,7 +12,7 @@ public class Fire : Terrain
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
-            ChangeHealth(other.gameObject.GetComponent<PlayerBulletHandler>().BulletDamage);
+            ChangeHealth(other.gameObject.GetComponent<TouchingDamage>().TouchDamage);
         }
     }
 
