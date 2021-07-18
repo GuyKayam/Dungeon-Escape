@@ -17,6 +17,6 @@ public class PlayerMovementHandler : MonoBehaviour
 
     public void OnMoveInput(float vertical, float horizontal)
     {
-        playerRigidBody.velocity = new Vector3(vertical * playerSpeed, horizontal * playerSpeed, 0);
+        playerRigidBody.velocity = new Vector3(vertical * playerSpeed, 0, horizontal * playerSpeed);
     }
 }

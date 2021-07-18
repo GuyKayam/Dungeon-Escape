@@ -1,0 +1,5 @@
+1.לפרק את מחלקת AUTONMY STEERING למחלקות נפרדות קלילות
+2.duplicate code בrock ו fire על להביא אובייקט חדש
+3.לחשוב על מערכת HP  ***
+4. bulletbelocityplayer
+5. אויב שיש לו גם ויי פויינט וגם צ'ייסר
