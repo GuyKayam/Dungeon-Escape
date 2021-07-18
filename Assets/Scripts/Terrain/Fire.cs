@@ -8,14 +8,6 @@ public class Fire : Terrain
     [SerializeField]
     int size;
 
-    protected void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
-        {
-            ChangeHealth(collision.gameObject.GetComponent<PlayerBulletHandler>().BulletDamage);
-        }
-    }
-
     protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
