@@ -12,15 +12,11 @@ public class EnemyBulletHandler : BulletLogic
         Destroy(gameObject);
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            playerScript.ChangeHealth(-1);
+            playerScript.ChangeHealth(1);
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()

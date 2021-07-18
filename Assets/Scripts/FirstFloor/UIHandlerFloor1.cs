@@ -15,8 +15,8 @@ public class UIHandlerFloor1 : MonoBehaviour
 
     [SerializeField]
     int xMargin = 50;
-    [SerializeField]
-    int yMargin = 40;
+/*    [SerializeField]
+    int yMargin = 40;*/
 
     Image[] heartRenderersArr;
 

@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour ,IHealth
 
     public void ChangeHealth(int changeInHP)
     {
-        currentHealth += changeInHP;
+        currentHealth -= changeInHP;
         uiHandler.ChangeHeartsAmount();
     }
 

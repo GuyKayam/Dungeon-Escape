@@ -24,10 +24,10 @@ public class Terrain : GenerationObject, IHealth
 
     public virtual void ChangeHealth(int changeInHP)
     {
-        currentHealth += changeInHP;
+        currentHealth -= changeInHP;
         if (currentHealth <= 0)
         {
-            Debug.Log("ISDED");
+            Destroy(gameObject);
         }
     }
 

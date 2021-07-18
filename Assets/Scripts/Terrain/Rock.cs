@@ -13,7 +13,7 @@ public class Rock : Terrain
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
-            ChangeHealth(collision.gameObject.GetComponent<PlayerBulletHandler>().BulletDamage);
+            ChangeHealth(collision.gameObject.GetComponent<TouchingDamage>().TouchDamage);
         }
     }
 
