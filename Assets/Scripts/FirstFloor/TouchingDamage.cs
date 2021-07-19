@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
-public class TouchingDamage : MonoBehaviour
+interface ITouchDamage
 {
 
     [SerializeField]
-     int touchDamage;
+    int TouchDamage
+    {
+        get;
+        set;
+    }
 
+
+    public void OnTriggerEnter(Collider other);
+
+}
+
+
+public class TouchingDamage : MonoBehaviour,ITouchDamage
+{
+    [SerializeField]
+    private int touchDamage;
     public int TouchDamage
     {
         get { return touchDamage; }
@@ -19,29 +30,22 @@ public class TouchingDamage : MonoBehaviour
 
 
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void OnTriggerEnter(Collider other)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-      IHealth attribute = other.gameObject.GetComponent(typeof(IHealth)) as IHealth;
+        IHealth attribute = other.gameObject.GetComponent(typeof(IHealth)) as IHealth;
         if (attribute is IHealth)
         {
             attribute.ChangeHealth(touchDamage);
 
         }
-
-
     }
-
 }
+
+
+
+
+
+
+
+
+

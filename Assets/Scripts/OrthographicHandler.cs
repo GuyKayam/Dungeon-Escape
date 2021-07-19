@@ -14,7 +14,7 @@ public class OrthographicHandler : MonoBehaviour
     void Start()
     {
        roomHeight= room.transform.localScale.y;
-        Camera.main.orthographicSize = roomHeight/2;
+        GetComponent<Camera>().orthographicSize  = roomHeight/2;
     }
 
     // Update is called once per frame

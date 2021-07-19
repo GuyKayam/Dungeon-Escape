@@ -14,17 +14,17 @@ public class UIHandlerFloor1 : MonoBehaviour
     Transform parentPanel;
 
     [SerializeField]
-    int xMargin = 50;
-/*    [SerializeField]
-    int yMargin = 40;*/
-
+    int xMargin = 5;
+    [SerializeField]
+    int yMargin = 40;
+    [SerializeField]
+    int startMargin = 460;
     Image[] heartRenderersArr;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
 
         Vector3 parentPosition = parentPanel.position;
 
@@ -33,8 +33,8 @@ public class UIHandlerFloor1 : MonoBehaviour
 
         for (int i = 0; i < playerScript.StartHealth; i++)
         {
-            heartContainersArr[i] = Instantiate(heartContainer, new Vector3(-xMargin + parentPosition.x - (i * xMargin), parentPosition.y - 40, parentPosition.z), parentPanel.rotation) as GameObject;
-            heartContainersArr[i].transform.SetParent(parentPanel);
+            heartContainersArr[i] = Instantiate(heartContainer, new Vector3(startMargin + parentPosition.x + (i * xMargin), parentPosition.y -yMargin, parentPosition.z),new Quaternion(0,0,0,0)) as GameObject;
+            heartContainersArr[i].transform.SetParent(parentPanel,false);
             heartRenderersArr[i] = heartContainersArr[i].transform.GetChild(0).GetComponent<Image>();
         }
     }
