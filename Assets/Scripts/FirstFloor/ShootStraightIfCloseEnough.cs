@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootAtGameObject : MonoBehaviour
+public class ShootStraightIfCloseEnough : MonoBehaviour
 {
     [SerializeField]
     Transform target;

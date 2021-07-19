@@ -39,6 +39,18 @@ public class TouchingDamage : MonoBehaviour,ITouchDamage
 
         }
     }
+
+     void OnCollisionEnter(Collision collision)
+    {
+
+            IHealth attribute = collision.gameObject.GetComponent(typeof(IHealth)) as IHealth;
+            if (attribute is IHealth)
+            {
+                attribute.ChangeHealth(touchDamage);
+
+            }
+        
+    }
 }
 
 
