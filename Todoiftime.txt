@@ -13,3 +13,4 @@
 
 
 1. לסדר את המערכת של TERRAIN ROCK FIRE
+2.דיילי התחלתי בRAYCAST ENEMY לא עובד

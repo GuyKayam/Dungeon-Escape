@@ -25,7 +25,7 @@ public class BasicHealthSystem :MonoBehaviour,IHealth
 
     public void ChangeHealth(int changeInHP)
     {
-        Debug.Log(currentHealth);
+        currentHealth -= changeInHP;
         if (currentHealth <= 0)
         {
             OnHealthReachedZero?.Invoke();
