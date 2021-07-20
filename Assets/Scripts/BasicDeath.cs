@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[System.Serializable]
 [RequireComponent(typeof(BasicHealthSystem))]
 public class BasicDeath : MonoBehaviour,IDeath
 {
