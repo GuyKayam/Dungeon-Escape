@@ -7,6 +7,10 @@ using UnityEngine;
 [RequireComponent(typeof(CheckRoomClear))]
 public class NewRoomStart : MonoBehaviour
 {
+    [SerializeField]
+    GameObject doorPrefab;
+
+
 
     [SerializeField]
     GameObject enemiesParent;
@@ -27,6 +31,7 @@ public class NewRoomStart : MonoBehaviour
     {
         GetEnemiesInRoom();
         GetComponent<CheckRoomClear>().SubscribeToDeathEvents(enemies);
+
     }
 
     // Update is called once per frame
@@ -35,7 +40,10 @@ public class NewRoomStart : MonoBehaviour
         
     }
 
+    void GenerateDoors()
+    {
 
+    }
 
     [ContextMenu("Get All Enemies In Room")]
     void GetEnemiesInRoom()
@@ -43,5 +51,5 @@ public class NewRoomStart : MonoBehaviour
         enemies = enemiesParent.GetComponentsInChildren<BasicDeath>().ToList();
     }
 
-
+    
 }
