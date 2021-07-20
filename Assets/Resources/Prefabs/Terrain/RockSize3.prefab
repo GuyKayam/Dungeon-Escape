@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 476412}
   - component: {fileID: 3385380}
   - component: {fileID: 2390562}
-  - component: {fileID: 8523183623285866135}
   - component: {fileID: 8766406705188651472}
+  - component: {fileID: 8770574018813124412}
+  - component: {fileID: -826565513306998962}
+  - component: {fileID: -3467797224915836964}
   m_Layer: 0
   m_Name: RockSize3
   m_TagString: Untagged
@@ -83,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8523183623285866135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee6b25a1bedcfa4e9d3f3e8726e0e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHealth: 15
-  size: 3
 --- !u!136 &8766406705188651472
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -111,3 +99,41 @@ CapsuleCollider:
   m_Height: 10
   m_Direction: 1
   m_Center: {x: -0.04876885, y: 4.05, z: 0.02134484}
+--- !u!114 &8770574018813124412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f136cccefb2c7474583ffb8c4392fff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 15
+--- !u!114 &-826565513306998962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d574d6afe072e8489ea1301f78eac45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3467797224915836964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec8c9122e8408b48ab5e3b41263fe3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeToThis: {fileID: 7783243533327286230, guid: 01de6926f61eaf94e92f8358edc9fe29, type: 3}

@@ -18,7 +18,6 @@ public class FrontRayCastChecker : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(CanSeePlayer());
     }
 
     protected bool CanSeePlayer()
@@ -28,7 +27,7 @@ public class FrontRayCastChecker : MonoBehaviour
 
         if ((Vector3.Angle(rayDirection, transform.forward)) <= fieldOfViewDegrees * 0.5f)
         {
-            if (Physics.Raycast(transform.position, rayDirection, out hit, lookDistance))
+            if (Physics.Raycast(transform.position, rayDirection, out hit, lookDistance,mask))
             {
                 Debug.DrawRay(transform.position, rayDirection, Color.green);
                 Debug.Log(hit.transform.name);

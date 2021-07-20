@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rock : Terrain
 {
-    public override string Name => "Rock";
+   /* public override string Name => "Rock";
 
     [SerializeField]
     int size;
@@ -48,5 +48,5 @@ public class Rock : Terrain
         }
      
         GameObject SmallRock = (GameObject)Instantiate(smallerRock, new Vector3(transform.position.x, transform.position.y, transform.position.z),transform.rotation);
-    }
+    }*/
 }

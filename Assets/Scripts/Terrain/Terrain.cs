@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Terrain : GenerationObject, IHealth
+public class Terrain : GenerationObject
 {
     /*    [SerializeField]
        public GameObject prefab;*/

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21bbb7a9397232841b37a9f461659987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchDamage: 4
+  touchDamage: 5
 --- !u!114 &3971947835668306671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2c6203cf987ce4abab2ced2b004604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTimer: 3
+  destroyTimer: 5
 --- !u!114 &894859997337202287
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fire : Terrain
+public class Fire : MonoBehaviour
 {
-    public override string Name => "Fire";
+/*    public override string Name => "Fire";
     [SerializeField]
-    int size;
+    int size;*/
 
-    protected void OnTriggerEnter(Collider other)
+/*    protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
             ChangeHealth(other.gameObject.GetComponent<TouchingDamage>().TouchDamage);
         }
-    }
+    }*/
 
 
 
 
-    public override void ChangeHealth(int changeInHP)
+/*    public override void ChangeHealth(int changeInHP)
     {
         currentHealth -= changeInHP;
         if (currentHealth <= 0)
@@ -32,9 +32,9 @@ public class Fire : Terrain
         
         }
 
-    }
+    }*/
 
-    void CreateSmallerFire(int size)
+/*    void CreateSmallerFire(int size)
     {
         GameObject smallerFire;
         switch (size)
@@ -51,5 +51,5 @@ public class Fire : Terrain
         }
 
         GameObject SmallFire = (GameObject)Instantiate(smallerFire, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-    }
+    }*/
 }
