@@ -11,7 +11,8 @@ public class BasicHealthSystem :MonoBehaviour,IHealth
     int startHealth;
     int currentHealth;
 
-    public event ChangedHealthHandler OnHealthReachedZero;
+    public event HealthReachedZero OnHealthReachedZero;
+    public event ChangedHealthHandler OnHealthChanged;
 
     public int StartHealth { get => startHealth; set => startHealth = value; }
     public int CurrentHealth { get => currentHealth; set { if (value >= 0) { currentHealth = value; } } }
@@ -23,9 +24,10 @@ public class BasicHealthSystem :MonoBehaviour,IHealth
         CurrentHealth = StartHealth;
     }
 
-    public void ChangeHealth(int changeInHP)
+    public virtual void  ChangeHealth(int changeInHP)
     {
         currentHealth -= changeInHP;
+        OnHealthChanged?.Invoke(changeInHP);
         if (currentHealth <= 0)
         {
             OnHealthReachedZero?.Invoke();

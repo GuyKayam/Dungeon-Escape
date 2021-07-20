@@ -8,7 +8,7 @@ public class UIHandlerFloor1 : MonoBehaviour
     [SerializeField]
     GameObject heartContainer;
     [SerializeField]
-    PlayerStats playerScript;
+    PlayerHealth playerHealthScript;
     GameObject[] heartContainersArr;
     [SerializeField]
     Transform parentPanel;
@@ -25,16 +25,16 @@ public class UIHandlerFloor1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerHealthScript.OnHealthChanged += ChangeHeartsAmount;
         Vector3 parentPosition = parentPanel.position;
 
-        heartContainersArr = new GameObject[playerScript.MaxHealth];
+        heartContainersArr = new GameObject[playerHealthScript.MaxHealth];
         heartRenderersArr = new Image[heartContainersArr.Length];
 
-        for (int i = 0; i < playerScript.StartHealth; i++)
+        for (int i = 0; i < playerHealthScript.StartHealth; i++)
         {
-            heartContainersArr[i] = Instantiate(heartContainer, new Vector3(startMargin + parentPosition.x + (i * xMargin), parentPosition.y -yMargin, parentPosition.z),new Quaternion(0,0,0,0)) as GameObject;
-            heartContainersArr[i].transform.SetParent(parentPanel,false);
+            heartContainersArr[i] = Instantiate(heartContainer, new Vector3(startMargin + parentPosition.x + (i * xMargin), parentPosition.y - yMargin, parentPosition.z), new Quaternion(0, 0, 0, 0)) as GameObject;
+            heartContainersArr[i].transform.SetParent(parentPanel, false);
             heartRenderersArr[i] = heartContainersArr[i].transform.GetChild(0).GetComponent<Image>();
         }
     }
@@ -45,9 +45,26 @@ public class UIHandlerFloor1 : MonoBehaviour
 
     }
 
-    public void ChangeHeartsAmount()
+    public void ChangeHeartsAmount(int changeInHealth)
     {
-        heartRenderersArr[playerScript.CurrentHealth].color = new Color(0, 0, 0);
+        int currentHP = playerHealthScript.CurrentHealth - 1;
+        int remainingHP = currentHP - changeInHealth;
+
+        if (remainingHP+1 > 0)
+        {
+            for (int i = currentHP; i > remainingHP; i--)
+            {
+                heartRenderersArr[i].color = new Color(0, 0, 0);
+            }
+        }
+        else
+        {
+            for (int i = currentHP; i >= 0; i--)
+            {
+                heartRenderersArr[i].color = new Color(0, 0, 0);
+            }
+        }
+
     }
 
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour 
 {
-    [SerializeField]
+/*    [SerializeField]
     UIHandlerFloor1 uiHandler;
 
     int startHealth=5;
@@ -15,13 +15,13 @@ public class PlayerStats : MonoBehaviour
     public int StartHealth { get => startHealth; set => startHealth = value; }
     public int CurrentHealth { get => currentHealth; set { if (value >= 0) { currentHealth = value; } } }
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
-
+*/
 
 
 
 
     // Start is called before the first frame update
-    void Start()
+/*    void  Start()
     {
         currentHealth = startHealth;
 
@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= changeInHP;
         uiHandler.ChangeHeartsAmount();
-    }
+    }*/
 
 
 

@@ -36,7 +36,6 @@ public class CheckRoomClear : MonoBehaviour
     void EnemyDied()
     {
         enemiesLeft--;
-        Debug.Log(enemiesLeft);
         if (enemiesLeft == 0)
         {
             OnRoomClear?.Invoke();

@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public delegate void ChangedHealthHandler();
+public delegate void ChangedHealthHandler(int change);
+public delegate void HealthReachedZero();
+
+
 
 interface IHealth
 {
@@ -22,7 +25,8 @@ interface IHealth
     }
 
     public void ChangeHealth(int changeInHP);
-    event ChangedHealthHandler OnHealthReachedZero;
+    event HealthReachedZero OnHealthReachedZero;
+    event ChangedHealthHandler OnHealthChanged;
 
 }
 
