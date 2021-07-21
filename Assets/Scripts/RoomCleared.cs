@@ -10,16 +10,22 @@ public class RoomCleared : MonoBehaviour
     [SerializeField]
     GameObject[] doors;
 
+    [SerializeField]
+    GameObject playerSpotLight;
+
 
     bool isDoorOpen = false;
 
-    Animator animator;
+    Animator doorAnimator;
+    Animator SpotLightAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         gameObject.GetComponent<CheckRoomClear>().OnRoomClear += OpenPortals;
         gameObject.GetComponent<CheckRoomClear>().OnRoomClear += DoDoorsAnimatons;
-      animator = doors[0].GetComponent<Animator>();
+        doorAnimator = doors[0].GetComponent<Animator>();
+        SpotLightAnimator = playerSpotLight.GetComponent<Animator>();
     }
 
     private void OpenPortals()
@@ -29,7 +35,8 @@ public class RoomCleared : MonoBehaviour
 
     private void DoDoorsAnimatons()
     {
-        animator.SetTrigger("Open");
+        doorAnimator.SetTrigger("Open");
+        SpotLightAnimator.SetTrigger("Spread");
 
     }
 

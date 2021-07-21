@@ -8,6 +8,10 @@ public class PlayerHealth : BasicHealthSystem
     int maxHealth = 7;
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public event ChangedHealthHandler OnHealthChanged;
+    [SerializeField]
+    float damageFrameDelay=1.5f;
+    float lastTimeHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,12 @@ public class PlayerHealth : BasicHealthSystem
 
     public override void ChangeHealth(int changeInHP)
     {
-        OnHealthChanged?.Invoke(changeInHP);
-        base.ChangeHealth(changeInHP);
+        if(Time.time>= lastTimeHit + damageFrameDelay)
+        {
+            OnHealthChanged?.Invoke(changeInHP);
+            base.ChangeHealth(changeInHP);
+            lastTimeHit = Time.time;
+        }
+
     }
 }
