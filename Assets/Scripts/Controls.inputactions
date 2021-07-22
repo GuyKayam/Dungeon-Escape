@@ -20,6 +20,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "DropBomb",
+                    "type": "Button",
+                    "id": "aadcd919-ef01-4db8-89d7-09a014e678d6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -132,6 +140,17 @@
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8530e7a1-3ece-4385-9135-bee4b55cde5d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropBomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

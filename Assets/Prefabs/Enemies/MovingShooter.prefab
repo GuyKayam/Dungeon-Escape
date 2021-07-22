@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2802310162221560135}
   - component: {fileID: 2802310162221560191}
   - component: {fileID: 2802310162221560128}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: MovingShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2802310162221560136}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 10
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b744dbd356d14d84710d788625c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 793158111326443846, guid: 9875d3c4f6cd1e549ba78342eca0d1d9, type: 3}
   bullet: {fileID: 832114834804719087, guid: 847da439e0879c843a49560d4429f53a, type: 3}
   maxDistance: 10
   fireDelay: 0.8

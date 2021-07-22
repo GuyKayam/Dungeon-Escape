@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5182190942975156418}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: DeadFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 775036520662460910}
   - component: {fileID: 2985185320000994365}
   - component: {fileID: 8845647385802723009}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Wood1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8889491233788724932}
   - component: {fileID: 668961887222893225}
   - component: {fileID: 6769893456785938535}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Wood2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

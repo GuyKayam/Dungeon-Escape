@@ -29,14 +29,18 @@ public class CheckRoomClear : MonoBehaviour
         }
     }
 
+    public void FinishRoomNow()
+    {
+
+        OnRoomClear?.Invoke();
+    }
 
 
 
-
-    void EnemyDied()
+     void EnemyDied()
     {
         enemiesLeft--;
-        if (enemiesLeft == 0)
+        if (enemiesLeft <= 0)
         {
             OnRoomClear?.Invoke();
         }

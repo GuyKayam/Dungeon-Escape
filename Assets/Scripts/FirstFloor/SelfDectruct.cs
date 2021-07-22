@@ -6,7 +6,15 @@ public class SelfDectruct : MonoBehaviour
 {
 
     [SerializeField]
-    private float destroyTimer = 4;
+     int destroyTimer = 4;
+
+
+    public int DestroyTimer
+    {
+        get { return destroyTimer; }
+        set { destroyTimer = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

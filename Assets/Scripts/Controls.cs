@@ -33,6 +33,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""DropBomb"",
+                    ""type"": ""Button"",
+                    ""id"": ""aadcd919-ef01-4db8-89d7-09a014e678d6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -145,6 +153,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8530e7a1-3ece-4385-9135-bee4b55cde5d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DropBomb"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -155,6 +174,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_Move = m_GamePlay.FindAction("Move", throwIfNotFound: true);
         m_GamePlay_Shoot = m_GamePlay.FindAction("Shoot", throwIfNotFound: true);
+        m_GamePlay_DropBomb = m_GamePlay.FindAction("DropBomb", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -206,12 +226,14 @@ public class @Controls : IInputActionCollection, IDisposable
     private IGamePlayActions m_GamePlayActionsCallbackInterface;
     private readonly InputAction m_GamePlay_Move;
     private readonly InputAction m_GamePlay_Shoot;
+    private readonly InputAction m_GamePlay_DropBomb;
     public struct GamePlayActions
     {
         private @Controls m_Wrapper;
         public GamePlayActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_GamePlay_Move;
         public InputAction @Shoot => m_Wrapper.m_GamePlay_Shoot;
+        public InputAction @DropBomb => m_Wrapper.m_GamePlay_DropBomb;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -227,6 +249,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Shoot.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnShoot;
+                @DropBomb.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
+                @DropBomb.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
+                @DropBomb.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
             }
             m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
@@ -237,6 +262,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @DropBomb.started += instance.OnDropBomb;
+                @DropBomb.performed += instance.OnDropBomb;
+                @DropBomb.canceled += instance.OnDropBomb;
             }
         }
     }
@@ -245,5 +273,6 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnDropBomb(InputAction.CallbackContext context);
     }
 }

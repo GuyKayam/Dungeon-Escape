@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4544700991829630918}
   - component: {fileID: 4544700991829630919}
   - component: {fileID: 4544700991829630940}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Suicider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4544700991829630943}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 10

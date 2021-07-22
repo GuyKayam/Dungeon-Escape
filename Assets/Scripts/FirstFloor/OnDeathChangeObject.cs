@@ -10,13 +10,12 @@ public class OnDeathChangeObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<IHealth>().OnHealthReachedZero += ChangeObject;
+        gameObject.GetComponent<IDeath>().OnDeath += InstantiateNewObject;
     }
 
 
-    void ChangeObject()
+    void InstantiateNewObject()
     {
-
         Instantiate(changeToThis, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
 
 

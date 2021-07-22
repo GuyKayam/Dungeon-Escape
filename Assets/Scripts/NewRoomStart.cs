@@ -18,7 +18,11 @@ public class NewRoomStart : MonoBehaviour
     [SerializeField]
     List<BasicDeath> enemies;
 
+    [SerializeField]
+    GameObject testEnemy;
 
+    [SerializeField]
+    CheckRoomClear checkRoomClearScript;
 
     public List<BasicDeath> Enemies
     {
@@ -30,7 +34,7 @@ public class NewRoomStart : MonoBehaviour
     void Start()
     {
         GetEnemiesInRoom();
-        GetComponent<CheckRoomClear>().SubscribeToDeathEvents(enemies);
+        checkRoomClearScript.SubscribeToDeathEvents(enemies);
 
     }
 
@@ -48,7 +52,11 @@ public class NewRoomStart : MonoBehaviour
     [ContextMenu("Get All Enemies In Room")]
     void GetEnemiesInRoom()
     {
-        enemies = enemiesParent.GetComponentsInChildren<BasicDeath>().ToList();
+        enemies = enemiesParent.GetComponentsInChildren<BasicDeath>().Where(t=> t.gameObject.activeSelf==true).ToList();
+        if (enemies.Count==0)
+        {
+            checkRoomClearScript.FinishRoomNow();
+        }
     }
 
     

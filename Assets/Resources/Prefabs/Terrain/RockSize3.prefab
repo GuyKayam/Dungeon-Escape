@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8770574018813124412}
   - component: {fileID: -826565513306998962}
   - component: {fileID: -3467797224915836964}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RockSize3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.2
-  m_Height: 10
+  m_Height: 30
   m_Direction: 1
   m_Center: {x: -0.04876885, y: 4.05, z: 0.02134484}
 --- !u!114 &8770574018813124412
@@ -136,4 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec8c9122e8408b48ab5e3b41263fe3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeToThis: {fileID: 7783243533327286230, guid: 01de6926f61eaf94e92f8358edc9fe29, type: 3}
+  changeToThis: {fileID: 7783243533327286230, guid: 01de6926f61eaf94e92f8358edc9fe29,
+    type: 3}

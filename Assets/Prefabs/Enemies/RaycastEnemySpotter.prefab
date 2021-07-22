@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5891249447996849949}
   - component: {fileID: 5891249447996849948}
   - component: {fileID: 5891249447996849922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RaycastEnemySpotter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,8 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 793158111326443842, guid: 9875d3c4f6cd1e549ba78342eca0d1d9,
+    type: 3}
   fieldOfViewDegrees: 50
   lookDistance: 5
   mat2: {fileID: 2100000, guid: 3ef1c5dbb5b2f4f408e15151b2b6ab22, type: 2}

@@ -36,6 +36,7 @@ public class AutonomySteering : MonoBehaviour
 
     void Seek()
     {    //slide 
+
         Vector3 direction = target.position - transform.position;
 
         direction.y = 0;

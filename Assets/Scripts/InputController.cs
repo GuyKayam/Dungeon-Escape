@@ -10,15 +10,24 @@ public  class MoveInputEvent : UnityEvent<float, float> { }
 public class ShootInputEvent : UnityEvent<float, float> { }
 
 [System.Serializable]
+public class DropBomb : UnityEvent { }
+
+[System.Serializable]
 public class ShootInputStopped : UnityEvent { }
 
 public class InputController : MonoBehaviour
 {
     Controls controls;
 
-    public MoveInputEvent moveInputEvent;
-    public ShootInputEvent shootInputEvent;
-    public ShootInputStopped shootInputStopped;
+    [SerializeField]
+     MoveInputEvent moveInputEvent;
+    [SerializeField]
+    ShootInputEvent shootInputEvent;
+    [SerializeField]
+     ShootInputStopped shootInputStopped;
+    [SerializeField]
+    DropBomb droppedBomb;
+
 
 
     private void Awake()
@@ -34,6 +43,7 @@ public class InputController : MonoBehaviour
         //controls.GamePlay.Shoot.performed += OnShootformed;
         controls.GamePlay.Shoot.performed += OnShootingBtnPressed;
         controls.GamePlay.Shoot.canceled += OnShootingBtnReleased;
+        controls.GamePlay.DropBomb.started += OnDropBomb;
 
 
         //controls.GamePlay.Shoot.canceled += OnShootformed;
@@ -42,17 +52,22 @@ public class InputController : MonoBehaviour
     private void OnMovePerformed(InputAction.CallbackContext context)
     {
         Vector2 movementInput = context.ReadValue<Vector2>();
-        moveInputEvent.Invoke(movementInput.x, movementInput.y);
+        moveInputEvent?.Invoke(movementInput.x, movementInput.y);
     }
 
     private void OnShootingBtnPressed(InputAction.CallbackContext context)
     {
         Vector2 shootingInput = context.ReadValue<Vector2>();
-        shootInputEvent.Invoke(shootingInput.x, shootingInput.y);
+        shootInputEvent?.Invoke(shootingInput.x, shootingInput.y);
     }
     private void OnShootingBtnReleased(InputAction.CallbackContext context)
     {
-        shootInputStopped.Invoke();
+        shootInputStopped?.Invoke();
+    }
+
+    private void OnDropBomb(InputAction.CallbackContext context)
+    {
+        droppedBomb?.Invoke();
     }
 
 

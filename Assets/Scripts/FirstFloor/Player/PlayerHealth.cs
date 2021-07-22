@@ -33,7 +33,12 @@ public class PlayerHealth : BasicHealthSystem
             OnHealthChanged?.Invoke(changeInHP);
             base.ChangeHealth(changeInHP);
             lastTimeHit = Time.time;
+            if (CurrentHealth <= 0)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            }
         }
+        
 
     }
 }

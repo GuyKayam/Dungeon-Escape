@@ -26,11 +26,25 @@ public class TouchingDamage : MonoBehaviour,ITouchDamage
 
         }
     }
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            
+            IHealth attribute = other.gameObject.GetComponent(typeof(IHealth)) as IHealth;
+            if (attribute is IHealth)
+            {
+                attribute.ChangeHealth(touchDamage);
 
-     void OnCollisionEnter(Collision collision)
+            }
+        }
+
+    }
+
+    void OnCollisionEnter(Collision collision)
     {
 
-            IHealth attribute = collision.gameObject.GetComponent(typeof(IHealth)) as IHealth;
+        IHealth attribute = collision.gameObject.GetComponent(typeof(IHealth)) as IHealth;
             if (attribute is IHealth)
             {
                 attribute.ChangeHealth(touchDamage);
