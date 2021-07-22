@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4544700991829630915}
   - component: {fileID: 4544700991829630914}
   - component: {fileID: 4544700991829630941}
-  - component: {fileID: 4544700991829630918}
   - component: {fileID: 4544700991829630919}
   - component: {fileID: 4544700991829630940}
+  - component: {fileID: -5293340728608520674}
   m_Layer: 6
   m_Name: Suicider
   m_TagString: Untagged
@@ -113,22 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchDamage: 1
---- !u!114 &4544700991829630918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544700991829630943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86499df9b7b6a3f43809ac863886f010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  moveSpeed: 6
-  rotationSpeed: 1
-  currentState: 2
 --- !u!114 &4544700991829630919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +138,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d574d6afe072e8489ea1301f78eac45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5293340728608520674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544700991829630943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92585d02b72f2c48a11e4c8e22059f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 6
+  rotationSpeed: 1

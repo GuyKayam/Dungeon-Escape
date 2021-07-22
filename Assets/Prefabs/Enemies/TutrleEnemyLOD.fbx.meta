@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 51a472ad6676f26428c56e7ab8e6cc4b
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 4763932479262161236
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer
+  - first:
+      74: -3234201759196901482
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.001
+  - first:
+      74: 1999104397005066792
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.002
+  - first:
+      74: 8120259923773183965
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.003
+  - first:
+      74: 5104832031435399379
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.004
+  - first:
+      74: 3063317537960226717
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.005
+  - first:
+      74: 6041838392097410644
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.006
+  - first:
+      74: 8683801736118997427
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.007
+  - first:
+      74: 4363686477793593462
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.008
+  - first:
+      74: -4278924907585100220
+    second: TurtleEnemy_LOD0|Armature|Take 001|BaseLayer.009
+  - first:
+      74: 6962077760356385160
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer
+  - first:
+      74: -7690977511952646977
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.001
+  - first:
+      74: 60880269122537016
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.002
+  - first:
+      74: 3277715664712556276
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.003
+  - first:
+      74: 1652639359310005699
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.004
+  - first:
+      74: 3708076139513053793
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.005
+  - first:
+      74: 3879686698817960485
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.006
+  - first:
+      74: 3439480825262639947
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.007
+  - first:
+      74: 7952619459611988506
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.008
+  - first:
+      74: -358551136626823248
+    second: TurtleShell_LOD1|Armature|Take 001|BaseLayer.009
+  - first:
+      74: -5952139258145883860
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer
+  - first:
+      74: 2969871179079004978
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.001
+  - first:
+      74: 6770102582887366326
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.002
+  - first:
+      74: -7196419694003359933
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.003
+  - first:
+      74: -5177181019617955206
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.004
+  - first:
+      74: -1020697231258536210
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.005
+  - first:
+      74: 6859068129435494368
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.006
+  - first:
+      74: -4112773266547023841
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.007
+  - first:
+      74: -5693839442949546532
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.008
+  - first:
+      74: -8835753404889650137
+    second: TurtleShell_LOD2|Armature|Take 001|BaseLayer.009
+  - first:
+      74: -4019242943558486979
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer
+  - first:
+      74: 7882492105063191414
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.001
+  - first:
+      74: -6536839694776329105
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.002
+  - first:
+      74: -3085056560820793076
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.003
+  - first:
+      74: 2629373748280717095
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.004
+  - first:
+      74: 1238512104436218943
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.005
+  - first:
+      74: 8245167338134385756
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.006
+  - first:
+      74: 7286221503258483450
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.007
+  - first:
+      74: -86986845618137270
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.008
+  - first:
+      74: -6219128334187907547
+    second: TurtleShell_LOD3|Armature|Take 001|BaseLayer.009
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.0625
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
