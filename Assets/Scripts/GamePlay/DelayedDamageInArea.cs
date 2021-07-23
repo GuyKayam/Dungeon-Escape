@@ -41,6 +41,7 @@ public class DelayedDamageInArea : MonoBehaviour
 
     void BombExplosion()
     {
+        
         Collider[] colliders = Physics.OverlapSphere(transform.position, blowRadius);
         foreach (var collider in colliders)
         {

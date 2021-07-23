@@ -24,6 +24,7 @@ interface IHealth
         set;
     }
 
+
     public void ChangeHealth(int changeInHP);
     event HealthReachedZero OnHealthReachedZero;
     event ChangedHealthHandler OnHealthChanged;

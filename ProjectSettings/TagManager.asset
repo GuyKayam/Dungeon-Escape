@@ -45,3 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 2985179763
+    locked: 0
+  - name: Terrain
+    uniqueID: 3446650695
+    locked: 0
+  - name: PlayerBullet
+    uniqueID: 270381377
+    locked: 0

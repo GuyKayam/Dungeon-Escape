@@ -120,7 +120,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d0ec26716d8530a44a8cd8f19b2cbdc8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,7 +153,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.15277694
+        value: 0.35404125
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -195,7 +195,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
@@ -217,9 +217,15 @@ MonoBehaviour:
     m_Bits: 8
   playerPrefab: {fileID: 793158111326443842, guid: 9875d3c4f6cd1e549ba78342eca0d1d9,
     type: 3}
+  isLookingDown: 0
   fieldOfViewDegrees: 50
   lookDistance: 5
-  mat2: {fileID: 2100000, guid: 3ef1c5dbb5b2f4f408e15151b2b6ab22, type: 2}
+  animationTextures:
+  - {fileID: 2800000, guid: 38273f59aef2a0e4fb8c4467d1886730, type: 3}
+  - {fileID: 2800000, guid: 1abcbc7f9d0a6144e89474a158dd1e60, type: 3}
+  - {fileID: 2800000, guid: afb4800caddf61c45bbe91480457e0c6, type: 3}
+  - {fileID: 2800000, guid: c2f5f5825d1080f488fc938c8eab2208, type: 3}
+  fps: 30
 --- !u!82 &5891249447996849951
 AudioSource:
   m_ObjectHideFlags: 0
