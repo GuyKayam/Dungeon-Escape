@@ -9,8 +9,6 @@ public class RaycastEnemy : MonoBehaviour
     #region SerializeFields
     [SerializeField]
     LayerMask mask;
-    [SerializeField]
-    GameObject playerPrefab;
 
     [SerializeField]
     bool isLookingDown;
@@ -48,6 +46,8 @@ public class RaycastEnemy : MonoBehaviour
     #region Logic
     public void Start()
     {
+
+
         oneDivideByFps = 1f / fps;
         zPos = transform.position.z;
         if (isLookingDown)
@@ -74,7 +74,7 @@ public class RaycastEnemy : MonoBehaviour
     protected bool CanSeePlayer()
     {
         
-        Vector3 rayDirection = playerPrefab.transform.position - transform.position;
+        Vector3 rayDirection = PlayerReference.instance.transform.position - transform.position;
 
         if ((Vector3.Angle(rayDirection, transform.forward)) <= fieldOfViewDegrees * 0.5f)
         {

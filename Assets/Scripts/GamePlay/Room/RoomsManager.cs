@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class RoomsManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject[] rooms;
+    [SerializeField]
+    GameObject roomPrefab;
     // Start is called before the first frame update
     void Start()
     {
+        Instantiate(roomPrefab,rooms[0].transform);
         
     }
 
@@ -14,5 +19,11 @@ public class RoomsManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public  void EnteredThroughPortal(int id)
+    {
+        Instantiate(roomPrefab);
     }
 }

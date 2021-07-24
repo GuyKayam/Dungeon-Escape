@@ -7,8 +7,6 @@ public class PlayerUiHealthHandler : MonoBehaviour
 {
     [SerializeField]
     GameObject heartContainer;
-    [SerializeField]
-    PlayerHealth playerHealthScript;
     GameObject[] heartContainersArr;
     [SerializeField]
     Transform parentPanel;
@@ -21,10 +19,12 @@ public class PlayerUiHealthHandler : MonoBehaviour
     int startMargin = 0;
     Image[] heartRenderersArr;
 
+    PlayerHealth playerHealthScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerHealthScript = GetComponent<PlayerHealth>();
         playerHealthScript.OnHealthChanged += ChangeHeartsAmount;
         Vector3 parentPosition = parentPanel.position;
 

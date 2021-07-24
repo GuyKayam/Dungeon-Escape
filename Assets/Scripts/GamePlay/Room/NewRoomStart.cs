@@ -7,20 +7,21 @@ using UnityEngine;
 [RequireComponent(typeof(CheckRoomClear))]
 public class NewRoomStart : MonoBehaviour
 {
-    [SerializeField]
-    GameObject doorPrefab;
+    GameObject room;
 
-    [SerializeField]
-    GameObject enemiesParent;
+    Transform doorsParent;
+    Transform enemiesParent;
 
     [SerializeField]
     List<BasicDeath> enemies;
 
     [SerializeField]
-    List<GameObject> doors;
+    List<EnteredThroughDoor> doors;
 
     [SerializeField]
     CheckRoomClear checkRoomClearScript;
+    [SerializeField]
+    RoomCleared roomClearedScript;
 
     public List<BasicDeath> Enemies
     {
@@ -31,8 +32,24 @@ public class NewRoomStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetEnemiesInRoom();
+        room = transform.parent.gameObject;
+        if (room.transform.childCount > 0)
+        {
+            enemiesParent = room.transform.GetChild(2);
+            doorsParent = room.transform.GetChild(3);
+
+        }
+        GetEnemiesInRoom(enemiesParent);
+        GetDoorsInRoom(doorsParent);
+        roomClearedScript.GetDoorsAnimtors(doorsParent.GetComponentsInChildren<Animator>());
+        if (!DoesRoomHaveEnemies())
+        {
+            checkRoomClearScript.FinishRoomNow();
+           
+        }
+ 
         checkRoomClearScript.SubscribeToDeathEvents(enemies);
+
     }
 
 
@@ -42,27 +59,28 @@ public class NewRoomStart : MonoBehaviour
     }
 
     [ContextMenu("Get All Enemies In Room")]
-    void GetDoorsInRoom()
+    void GetDoorsInRoom(Transform parent)
     {
-/*        doors = enemiesParent.GetComponentsInChildren<BasicDeath>().Where(t => t.gameObject.activeSelf == true).ToList();
-        if (enemies.Count == 0)
-        {
-            checkRoomClearScript.FinishRoomNow();
-        }*/
+        doors = parent.GetComponentsInChildren<EnteredThroughDoor>().Where(t => t.gameObject.activeSelf == true).ToList();
+        
     }
 
 
     [ContextMenu("Get All Enemies In Room")]
-    void GetEnemiesInRoom()
+    void GetEnemiesInRoom(Transform parent)
     {
-        enemies = enemiesParent.GetComponentsInChildren<BasicDeath>().Where(t=> t.gameObject.activeSelf==true).ToList();
-       
-        //if we have no enemies, we end the room immediately (opening doors and portals)
-        if (enemies.Count==0)
+        enemies = parent.GetComponentsInChildren<BasicDeath>().Where(t=> t.gameObject.activeSelf==true).ToList();
+     
+    }
+
+    bool DoesRoomHaveEnemies()
+    {
+        if (enemies.Count == 0)
         {
-            checkRoomClearScript.FinishRoomNow();
+            return false;
         }
-      
+        else
+            return true;
     }
 
 

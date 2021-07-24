@@ -17,12 +17,11 @@ public class PlayerBombsHandler : MonoBehaviour
     [SerializeField]
     GameObject bombPrefab;
 
-    [SerializeField]
     PlayerUiBombsHandler playerUIBombsHandler;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerUIBombsHandler = GetComponent<PlayerUiBombsHandler>();
     }
 
     // Update is called once per frame
