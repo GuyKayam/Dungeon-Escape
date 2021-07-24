@@ -11,36 +11,23 @@ public class CheckRoomClear : MonoBehaviour
     public event RoomStateChanged OnRoomClear;
 
 
-
-    int enemiesLeft;
-
-    private void Start()
-    {
-        
-    }
-
-
     public void SubscribeToDeathEvents(List<BasicDeath> enemies)
     {
-        enemiesLeft = enemies.Count;
         foreach (var enemy in GetComponent<NewRoomStart>().Enemies)
         {
-            enemy.OnDeath += EnemyDied;
+            enemy.OnDeath += CheckIfRoomCleared;
         }
     }
 
     public void FinishRoomNow()
     {
-
         OnRoomClear?.Invoke();
     }
 
 
-
-     void EnemyDied()
+    void CheckIfRoomCleared()
     {
-        enemiesLeft--;
-        if (enemiesLeft <= 0)
+        if (Enemies.enemyCount <= 0)
         {
             OnRoomClear?.Invoke();
         }

@@ -30,7 +30,7 @@ public class RoomCleared : MonoBehaviour
 
     private void OpenPortals()
     {
-        //OpenPortals
+       //Enable Portals On Doors
     }
 
     private void DoDoorsAnimatons()

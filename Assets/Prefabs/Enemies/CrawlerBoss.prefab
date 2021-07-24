@@ -2696,6 +2696,7 @@ GameObject:
   - component: {fileID: 5236378634855341739}
   - component: {fileID: 5236378634855341738}
   - component: {fileID: 5236378634855341745}
+  - component: {fileID: -1521614454299666712}
   m_Layer: 6
   m_Name: CrawlerBoss
   m_TagString: Untagged
@@ -2847,3 +2848,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &-1521614454299666712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236378634855341737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc9163d558be3a4089cbd2fe9dcda1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

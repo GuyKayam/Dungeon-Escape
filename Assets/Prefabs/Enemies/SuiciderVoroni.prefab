@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6629811435908857454}
   - component: {fileID: 6629811435908857455}
   - component: {fileID: 4496818670690397111}
+  - component: {fileID: -3988387154070494872}
   m_Layer: 6
   m_Name: SuiciderVoroni
   m_TagString: Untagged
@@ -168,3 +169,15 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 6
   rotationSpeed: 1
+--- !u!114 &-3988387154070494872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818856937275933499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc9163d558be3a4089cbd2fe9dcda1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

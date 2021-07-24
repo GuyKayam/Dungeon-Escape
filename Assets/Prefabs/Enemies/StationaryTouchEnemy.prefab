@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7450877125087548882}
   - component: {fileID: 7450877125087548880}
   - component: {fileID: 7450877125087548883}
+  - component: {fileID: 1495073089276514310}
   m_Layer: 6
   m_Name: StationaryTouchEnemy
   m_TagString: Untagged
@@ -135,5 +136,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d574d6afe072e8489ea1301f78eac45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1495073089276514310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7450877125087548841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc9163d558be3a4089cbd2fe9dcda1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

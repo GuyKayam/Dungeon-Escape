@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5891249447996849949}
   - component: {fileID: 5891249447996849948}
   - component: {fileID: 5891249447996849922}
+  - component: {fileID: 3990349003122617152}
   m_Layer: 6
   m_Name: RaycastEnemySpotter
   m_TagString: Untagged
@@ -360,3 +361,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 10, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3990349003122617152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891249447996849940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc9163d558be3a4089cbd2fe9dcda1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

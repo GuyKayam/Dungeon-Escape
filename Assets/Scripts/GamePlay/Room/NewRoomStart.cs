@@ -10,8 +10,6 @@ public class NewRoomStart : MonoBehaviour
     [SerializeField]
     GameObject doorPrefab;
 
-
-
     [SerializeField]
     GameObject enemiesParent;
 
@@ -19,7 +17,7 @@ public class NewRoomStart : MonoBehaviour
     List<BasicDeath> enemies;
 
     [SerializeField]
-    GameObject testEnemy;
+    List<GameObject> doors;
 
     [SerializeField]
     CheckRoomClear checkRoomClearScript;
@@ -35,14 +33,8 @@ public class NewRoomStart : MonoBehaviour
     {
         GetEnemiesInRoom();
         checkRoomClearScript.SubscribeToDeathEvents(enemies);
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void GenerateDoors()
     {
@@ -50,14 +42,30 @@ public class NewRoomStart : MonoBehaviour
     }
 
     [ContextMenu("Get All Enemies In Room")]
+    void GetDoorsInRoom()
+    {
+/*        doors = enemiesParent.GetComponentsInChildren<BasicDeath>().Where(t => t.gameObject.activeSelf == true).ToList();
+        if (enemies.Count == 0)
+        {
+            checkRoomClearScript.FinishRoomNow();
+        }*/
+    }
+
+
+    [ContextMenu("Get All Enemies In Room")]
     void GetEnemiesInRoom()
     {
         enemies = enemiesParent.GetComponentsInChildren<BasicDeath>().Where(t=> t.gameObject.activeSelf==true).ToList();
+       
+        //if we have no enemies, we end the room immediately (opening doors and portals)
         if (enemies.Count==0)
         {
             checkRoomClearScript.FinishRoomNow();
         }
+      
     }
 
-    
+
+
+
 }
