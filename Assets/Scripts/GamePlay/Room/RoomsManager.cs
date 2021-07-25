@@ -6,10 +6,12 @@ public class RoomsManager : MonoBehaviour
 {
 
    
-    [SerializeField]
     GameObject[] rooms;
     [SerializeField]
     GameObject roomManagerPrefab;
+
+    [SerializeField]
+    Transform roomsParent;
 
     [SerializeField]
     GameObject minimapIndicator;
@@ -21,9 +23,24 @@ public class RoomsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rooms = new GameObject[roomsParent.childCount];
+        GetRooms();
         EnteredThroughDoor.OnRoomMove += EnteredThroughPortal;
         Instantiate(roomManagerPrefab, rooms[0].transform);
         currentRoomId = 0;
+    }
+    private void OnDestroy()
+    {
+        EnteredThroughDoor.OnRoomMove -= EnteredThroughPortal;
+
+    }
+
+    void GetRooms()
+    {
+        for (int i = 0; i < roomsParent.childCount; i++)
+        {
+            rooms[i] = roomsParent.GetChild(i).gameObject;
+        }
     }
 
     // Update is called once per frame

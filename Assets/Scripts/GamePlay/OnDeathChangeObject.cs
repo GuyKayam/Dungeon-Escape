@@ -13,6 +13,13 @@ public class OnDeathChangeObject : MonoBehaviour
         gameObject.GetComponent<IDeath>().OnDeath += InstantiateNewObject;
     }
 
+    private void OnDestroy()
+    {
+        gameObject.GetComponent<IDeath>().OnDeath -= InstantiateNewObject;
+
+    }
+    
+
 
     void InstantiateNewObject()
     {

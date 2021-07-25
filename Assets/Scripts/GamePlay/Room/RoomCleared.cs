@@ -30,6 +30,12 @@ public class RoomCleared : MonoBehaviour
     {
 
     }
+
+    private void OnDestroy()
+    {
+        gameObject.GetComponent<CheckRoomClear>().OnRoomClear -= OpenPortals;
+        gameObject.GetComponent<CheckRoomClear>().OnRoomClear -= DoDoorsAnimatons;
+    }
     public void GetDoorsAndCacheRef(Transform doorsParent)
     {
         doorsPortalColliders = doorsParent.GetComponentsInChildren<BoxCollider>();

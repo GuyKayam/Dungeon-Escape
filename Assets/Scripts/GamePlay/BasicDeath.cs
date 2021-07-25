@@ -23,6 +23,12 @@ public class BasicDeath : MonoBehaviour,IDeath
 
     }
 
+    void OnDestroy()
+    {
+        gameObject.GetComponent<IHealth>().OnHealthReachedZero -= Death;
+
+    }
+
     // Update is called once per frame
     void Update()
     {

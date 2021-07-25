@@ -39,6 +39,12 @@ public class PlayerUiHealthHandler : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        playerHealthScript.OnHealthChanged -= ChangeHeartsAmount;
+
+    }
+
     // Update is called once per frame
     void Update()
     {

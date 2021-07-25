@@ -14,6 +14,11 @@ public class Enemies : MonoBehaviour
         GetComponent<BasicDeath>().OnDeath += ReduceEnemyCountByOne;
     }
 
+    private void OnDestroy()
+    {
+        GetComponent<BasicDeath>().OnDeath -= ReduceEnemyCountByOne;
+
+    }
     // Update is called once per frame
     void Update()
     {
