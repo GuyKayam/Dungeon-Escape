@@ -7,10 +7,11 @@ using UnityEngine;
 [RequireComponent(typeof(CheckRoomClear))]
 public class RoomCleared : MonoBehaviour
 {
-
-    GameObject playa;
     [SerializeField]
-    Animator[] doorsAnimtors;
+    List<EnteredThroughDoor> doors;
+
+    BoxCollider[] doorsPortalColliders;
+    Animator[] doorsAnimators;
 
     GameObject playerSpotLight;
 
@@ -22,35 +23,45 @@ public class RoomCleared : MonoBehaviour
         gameObject.GetComponent<CheckRoomClear>().OnRoomClear += OpenPortals;
         gameObject.GetComponent<CheckRoomClear>().OnRoomClear += DoDoorsAnimatons;
         SpotLightAnimator = PlayerReference.instance.transform.GetChild(3).GetComponent<Animator>();
-    }
+    }  
 
     // Start is called before the first frame update
     void Start()
     {
-      //  playa = SceneManager.Instance.player;
 
+    }
+    public void GetDoorsAndCacheRef(Transform doorsParent)
+    {
+        doorsPortalColliders = doorsParent.GetComponentsInChildren<BoxCollider>();
+        doorsAnimators = doorsParent.GetComponentsInChildren<Animator>();
     }
 
     private void OpenPortals()
     {
-       //Enable Portals On Doors
+
+        foreach (var boxcollider in doorsPortalColliders)
+        {
+            boxcollider.enabled = true;
+        }
+
+      
     }
 
-    public void GetDoorsAnimtors(Animator[] animators)
-    {
-        doorsAnimtors = animators;
 
-    }
 
     private void DoDoorsAnimatons()
     {
-        foreach (var animator in doorsAnimtors)
+        foreach (var animator in doorsAnimators)
         {
-            animator.SetTrigger("Open"); 
+            animator.SetTrigger("Open");
         }
         SpotLightAnimator.SetTrigger("Spread");
-        Destroy(gameObject);
+        DestroySelf();
+    }
 
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

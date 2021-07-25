@@ -16,7 +16,7 @@ public class NewRoomStart : MonoBehaviour
     List<BasicDeath> enemies;
 
     [SerializeField]
-    List<EnteredThroughDoor> doors;
+     List<EnteredThroughDoor> doors;
 
     [SerializeField]
     CheckRoomClear checkRoomClearScript;
@@ -41,7 +41,7 @@ public class NewRoomStart : MonoBehaviour
         }
         GetEnemiesInRoom(enemiesParent);
         GetDoorsInRoom(doorsParent);
-        roomClearedScript.GetDoorsAnimtors(doorsParent.GetComponentsInChildren<Animator>());
+        roomClearedScript.GetDoorsAndCacheRef(doorsParent);
         if (!DoesRoomHaveEnemies())
         {
             checkRoomClearScript.FinishRoomNow();
@@ -62,7 +62,6 @@ public class NewRoomStart : MonoBehaviour
     void GetDoorsInRoom(Transform parent)
     {
         doors = parent.GetComponentsInChildren<EnteredThroughDoor>().Where(t => t.gameObject.activeSelf == true).ToList();
-        
     }
 
 
