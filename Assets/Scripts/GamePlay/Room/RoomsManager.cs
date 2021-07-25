@@ -56,7 +56,6 @@ public class RoomsManager : MonoBehaviour
         InstnatiateNewRoomManager();
         MoveObjectsToNewRoom(doorPosition);
         SetMiniMapIndicator();
-        Debug.Log(rooms[newRoomId].name);
         
         
         //PlayerReference.instance.transform.position =
@@ -103,7 +102,6 @@ public class RoomsManager : MonoBehaviour
         float cameraYPos = Camera.main.transform.position.y;
         float playerYpos = PlayerReference.instance.transform.position.y;
         float minimapIndicatorYpos = minimapIndicator.transform.position.y;
-        Debug.Log(playerYpos);
         PlayerReference.instance.transform.position =new Vector3(newPostion.x+ playerDoorPositionMargin.x, playerYpos,newPostion.z+ playerDoorPositionMargin.y);
         Camera.main.transform.position = new Vector3(newPostion.x, cameraYPos,newPostion.z);
         minimapIndicator.transform.position = new Vector3(newPostion.x, minimapIndicatorYpos, newPostion.z);
