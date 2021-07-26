@@ -41,6 +41,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Esc"",
+                    ""type"": ""Button"",
+                    ""id"": ""0b0e1c07-00e5-4eae-aa2e-789aff6f05e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -164,6 +172,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""DropBomb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""518483dd-dba8-4507-b3cc-b3ff8eb4e8d8"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -175,6 +194,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_GamePlay_Move = m_GamePlay.FindAction("Move", throwIfNotFound: true);
         m_GamePlay_Shoot = m_GamePlay.FindAction("Shoot", throwIfNotFound: true);
         m_GamePlay_DropBomb = m_GamePlay.FindAction("DropBomb", throwIfNotFound: true);
+        m_GamePlay_Esc = m_GamePlay.FindAction("Esc", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -227,6 +247,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_GamePlay_Move;
     private readonly InputAction m_GamePlay_Shoot;
     private readonly InputAction m_GamePlay_DropBomb;
+    private readonly InputAction m_GamePlay_Esc;
     public struct GamePlayActions
     {
         private @Controls m_Wrapper;
@@ -234,6 +255,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_GamePlay_Move;
         public InputAction @Shoot => m_Wrapper.m_GamePlay_Shoot;
         public InputAction @DropBomb => m_Wrapper.m_GamePlay_DropBomb;
+        public InputAction @Esc => m_Wrapper.m_GamePlay_Esc;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -252,6 +274,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @DropBomb.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
                 @DropBomb.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
                 @DropBomb.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnDropBomb;
+                @Esc.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
+                @Esc.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
+                @Esc.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnEsc;
             }
             m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
@@ -265,6 +290,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @DropBomb.started += instance.OnDropBomb;
                 @DropBomb.performed += instance.OnDropBomb;
                 @DropBomb.canceled += instance.OnDropBomb;
+                @Esc.started += instance.OnEsc;
+                @Esc.performed += instance.OnEsc;
+                @Esc.canceled += instance.OnEsc;
             }
         }
     }
@@ -274,5 +302,6 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnDropBomb(InputAction.CallbackContext context);
+        void OnEsc(InputAction.CallbackContext context);
     }
 }

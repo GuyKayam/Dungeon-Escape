@@ -24,4 +24,28 @@ public class GameSceneManager : AutoCleanUpSingleton<GameSceneManager>
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void ReturnToWelcomeScreen()
+    {
+        SceneManager.LoadScene(0);
+
+    }
+
+    public void ExitToDesktop()
+    {
+        Application.Quit();
+
+    }
+
+     public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public  void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
+
+
 }

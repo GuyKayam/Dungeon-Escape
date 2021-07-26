@@ -13,7 +13,12 @@ public class ShootInputEvent : UnityEvent<float, float> { }
 public class DropBomb : UnityEvent { }
 
 [System.Serializable]
+public class EscPressed : UnityEvent { }
+
+[System.Serializable]
 public class ShootInputStopped : UnityEvent { }
+
+
 
 public class InputController : MonoBehaviour
 {
@@ -27,6 +32,9 @@ public class InputController : MonoBehaviour
      ShootInputStopped shootInputStopped;
     [SerializeField]
     DropBomb droppedBomb;
+
+    [SerializeField]
+    EscPressed pressedEscKey;
 
 
 
@@ -44,6 +52,7 @@ public class InputController : MonoBehaviour
         controls.GamePlay.Shoot.performed += OnShootingBtnPressed;
         controls.GamePlay.Shoot.canceled += OnShootingBtnReleased;
         controls.GamePlay.DropBomb.started += OnDropBomb;
+        controls.GamePlay.Esc.started += OnPressedEsc;
 
 
         //controls.GamePlay.Shoot.canceled += OnShootformed;
@@ -68,6 +77,11 @@ public class InputController : MonoBehaviour
     private void OnDropBomb(InputAction.CallbackContext context)
     {
         droppedBomb?.Invoke();
+    }
+
+   void OnPressedEsc(InputAction.CallbackContext context)
+    {
+        pressedEscKey?.Invoke();
     }
 
 
