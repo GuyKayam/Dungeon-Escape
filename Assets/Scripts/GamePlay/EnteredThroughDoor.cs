@@ -17,7 +17,9 @@ public class EnteredThroughDoor : MonoBehaviour
     [SerializeField]
     DoorPositioning direction;
 
-    public  delegate void PassedThroughDoor(DoorPositioning pos);
+    [SerializeField]
+    int roomId;
+    public  delegate void PassedThroughDoor(int roomId,DoorPositioning direction);
     public static event PassedThroughDoor OnRoomMove;
 
 
@@ -37,7 +39,7 @@ public class EnteredThroughDoor : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            OnRoomMove?.Invoke(direction);
+            OnRoomMove?.Invoke(roomId,direction);
         }
 
     }

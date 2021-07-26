@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootStraightIfCloseEnough : MonoBehaviour
 {
-    [SerializeField]
     Transform target;
     [SerializeField]
     GameObject bullet;
@@ -20,7 +19,7 @@ public class ShootStraightIfCloseEnough : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        target = PlayerReference.instance.transform;
     }
     // Update is called once per frame
     void Update()

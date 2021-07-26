@@ -5,13 +5,18 @@ using UnityEngine;
 public class LookAtGameObject : MonoBehaviour
 {
  
-    [SerializeField]
     Transform target;
     [SerializeField]
     float rotationSpeed = 1;
 
 
     Vector3 direction;
+
+    private void Start()
+    {
+        target = PlayerReference.instance.transform;
+    }
+
     // Update is called once per frame
     void Update()
     {

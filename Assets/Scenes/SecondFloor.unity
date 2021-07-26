@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &47070655
 Animator:
   serializedVersion: 3
@@ -517,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &52319127
 Animator:
   serializedVersion: 3
@@ -1127,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &129545303
 Animator:
   serializedVersion: 3
@@ -2024,6 +2027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &196228202
 Animator:
   serializedVersion: 3
@@ -3215,6 +3219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &306178054
 Animator:
   serializedVersion: 3
@@ -3776,6 +3781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &334217256
 Animator:
   serializedVersion: 3
@@ -5851,6 +5857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &461734004
 Animator:
   serializedVersion: 3
@@ -6232,6 +6239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &500130842
 Animator:
   serializedVersion: 3
@@ -7214,6 +7222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &632021101
 Animator:
   serializedVersion: 3
@@ -7854,6 +7863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &675360516
 Animator:
   serializedVersion: 3
@@ -8062,6 +8072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &685964176
 Animator:
   serializedVersion: 3
@@ -8172,6 +8183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &697768283
 Animator:
   serializedVersion: 3
@@ -8588,7 +8600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e181fd161a9d4c41a7d09c87806d01d, type: 2}
+  - {fileID: 2100000, guid: b3e5f1d197fe4d442851d457fcef2343, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10880,6 +10892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &861910338
 Animator:
   serializedVersion: 3
@@ -11311,6 +11324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &912532745
 Animator:
   serializedVersion: 3
@@ -12642,6 +12656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &1000029615
 Animator:
   serializedVersion: 3
@@ -14050,6 +14065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
+  roomId: 0
 --- !u!95 &1121685039
 Animator:
   serializedVersion: 3
@@ -15647,6 +15663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &1192198029
 Animator:
   serializedVersion: 3
@@ -16323,6 +16340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &1252252891
 Animator:
   serializedVersion: 3
@@ -19862,6 +19880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 3
+  roomId: 0
 --- !u!95 &1529741830
 Animator:
   serializedVersion: 3
@@ -20250,6 +20269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &1568179871
 Animator:
   serializedVersion: 3
@@ -24190,6 +24210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &1958711614
 Animator:
   serializedVersion: 3
@@ -25214,6 +25235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &2034025975
 Animator:
   serializedVersion: 3
@@ -25570,6 +25592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  roomId: 0
 --- !u!95 &2048090832
 Animator:
   serializedVersion: 3
@@ -26501,6 +26524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
+  roomId: 0
 --- !u!95 &2105380158
 Animator:
   serializedVersion: 3

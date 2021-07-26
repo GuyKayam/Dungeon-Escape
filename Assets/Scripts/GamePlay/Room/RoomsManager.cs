@@ -50,8 +50,9 @@ public class RoomsManager : MonoBehaviour
     }
 
 
-    public  void EnteredThroughPortal(DoorPositioning doorPosition)
+    public  void EnteredThroughPortal(int nextRoomId, DoorPositioning doorPosition)
     {
+        newRoomId = nextRoomId;
         EnableNewRoom(doorPosition);
         InstnatiateNewRoomManager();
         MoveObjectsToNewRoom(doorPosition);
@@ -67,21 +68,17 @@ public class RoomsManager : MonoBehaviour
         switch (doorPos)
         {
             case DoorPositioning.Top:
-                newRoomId = currentRoomId + 1;
                 playerDoorPositionMargin =new Vector2(0,-4);
                 break;
             case DoorPositioning.Bottom:
-                newRoomId = currentRoomId - 1;
                 playerDoorPositionMargin = new Vector2(0, +4);
 
                 break;
             case DoorPositioning.Left:
-                newRoomId = currentRoomId - 3;
                 playerDoorPositionMargin = new Vector2(7, 0);
 
                 break;
             case DoorPositioning.Right:
-                newRoomId = currentRoomId + 3;
                 playerDoorPositionMargin = new Vector2(-7, 0);
                 
                 break;
