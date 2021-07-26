@@ -14,11 +14,12 @@ public class PlayerUiBombsHandler : MonoBehaviour
         bombAmount.text = GetComponent<PlayerBombsHandler>().NumberOfBombs.ToString();
     }
 
-    public void reduceBombAmount(int amountLeft)
+    public void UpdateBombAmount(int amountLeft)
     {
         bombAmount.text = amountLeft.ToString();
-
     }
+
+
 
     // Update is called once per frame
     void Update()

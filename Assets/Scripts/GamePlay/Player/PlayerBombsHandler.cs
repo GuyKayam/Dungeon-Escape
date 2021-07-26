@@ -35,8 +35,22 @@ public class PlayerBombsHandler : MonoBehaviour
         if (numberOfBombs > 0)
         {
             numberOfBombs--;
-            playerUIBombsHandler.reduceBombAmount(numberOfBombs);
+            playerUIBombsHandler.UpdateBombAmount(numberOfBombs);
             Instantiate(bombPrefab, new Vector3(transform.position.x, 1, transform.position.z), bombPrefab.transform.rotation);
         }
+    }
+
+    public void ChangeBombsAmount(int changeNumber)
+    {
+        if (numberOfBombs + changeNumber <= 0)
+        {
+            numberOfBombs = 0;
+        }
+        else
+        {
+            numberOfBombs += changeNumber;
+        }
+        playerUIBombsHandler.UpdateBombAmount(numberOfBombs);
+
     }
 }
