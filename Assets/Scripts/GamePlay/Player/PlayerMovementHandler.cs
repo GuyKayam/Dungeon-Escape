@@ -9,6 +9,16 @@ public class PlayerMovementHandler : MonoBehaviour
     float playerSpeed = 4;
 
     Rigidbody playerRigidBody;
+
+    bool disableMovement;
+
+
+    public bool DisableMovement
+    {
+        get { return disableMovement; }
+        set { disableMovement = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +27,14 @@ public class PlayerMovementHandler : MonoBehaviour
 
     public void OnMoveInput(float vertical, float horizontal)
     {
-        playerRigidBody.velocity = new Vector3(vertical * playerSpeed, 0, horizontal * playerSpeed);
+        if (!disableMovement)
+        {
+            playerRigidBody.velocity = new Vector3(vertical * playerSpeed, 0, horizontal * playerSpeed);
+        }
+        else
+        {
+            playerRigidBody.velocity = new Vector3(0, 0, 0);
+
+        }
     }
 }
