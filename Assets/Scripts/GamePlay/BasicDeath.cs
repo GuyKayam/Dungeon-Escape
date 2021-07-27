@@ -9,11 +9,21 @@ public class BasicDeath : MonoBehaviour,IDeath
 {
     public event OnDeathHandler OnDeath;
 
+    [SerializeField]
+    bool shouldDestroyParent;
 
     public void Death()
     {
+       
         OnDeath?.Invoke();
+        if (shouldDestroyParent)
+        if (shouldDestroyParent)
+        {
+        Destroy(gameObject.transform.parent.gameObject);
+            return;
+        }
         Destroy(gameObject);
+
     }
 
     // Start is called before the first frame update

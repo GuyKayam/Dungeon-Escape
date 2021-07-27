@@ -29,7 +29,33 @@ public class EnemySeek : MonoBehaviour
     void Seek()
     {    //slide 
 
+        int neighborCount = 0;
+        Vector3 force = new Vector3(0, 0, 0);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 1);
+        foreach (var collider in colliders)
+        {
+            if (collider.gameObject.GetComponent<EnemySeek>() != null)
+            {
+                force.x += collider.transform.position.x - transform.position.x;
+                force.z += collider.transform.position.z - transform.position.z;
+                neighborCount++;
+            }
+        }
+        if (neighborCount != 0)
+        {
+            force.x /= neighborCount;
+            force.z /= neighborCount;
+
+            force = Vector3.Scale(force, new Vector3(-1, -1, -1));
+        }
+
+        force.Normalize();
+        force = Vector3.Scale(force, new Vector3(2, 2, 2));
+
+
+
         Vector3 direction = target.position - transform.position;
+        direction = direction + force;
 
         direction.y = 0;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);

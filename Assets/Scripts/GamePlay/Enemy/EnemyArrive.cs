@@ -37,8 +37,6 @@ public class EnemyArrive : MonoBehaviour
                 neighborCount++;
             }
         }
-        Debug.Log("forceX is = " + force.x);
-        Debug.Log("forceZ is = " + force.z);
         if (neighborCount != 0)
         {
             force.x /= neighborCount;
