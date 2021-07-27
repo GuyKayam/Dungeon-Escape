@@ -13,10 +13,7 @@ public class EscPanel : MonoBehaviour
     {
         
     }
-    public void hehe()
-    {
-        Debug.Log("");
-    }
+   
 
 
     public void ReturnToGame()
@@ -39,7 +36,7 @@ public class EscPanel : MonoBehaviour
    public void ChangeEscPanelState()
     {
          isTurnedOn = !isTurnedOn;
-        if (isTurnedOn)
+        if (!isTurnedOn)
         {
             GameSceneManager.Instance.ResumeGame();
             escPanel.SetActive(false);

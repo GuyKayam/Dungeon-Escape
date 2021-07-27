@@ -32,6 +32,7 @@ public class GameSceneManager : AutoCleanUpSingleton<GameSceneManager>
 
     public void ReturnToWelcomeScreen()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
 
     }
