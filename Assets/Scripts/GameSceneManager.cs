@@ -24,6 +24,12 @@ public class GameSceneManager : AutoCleanUpSingleton<GameSceneManager>
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void ResetFloor()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+
+    }
+
     public void ReturnToWelcomeScreen()
     {
         SceneManager.LoadScene(0);

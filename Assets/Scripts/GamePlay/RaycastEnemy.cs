@@ -65,6 +65,7 @@ public class RaycastEnemy : MonoBehaviour
        if(CanSeePlayer())
         {
             PlayAudioSourceSound();
+            StartCoroutine(ReturnToStartAfterTime(2));
         }
         ShowRayRange();
 
@@ -80,7 +81,7 @@ public class RaycastEnemy : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, rayDirection, out hit, lookDistance,mask))
             {
-                Debug.DrawRay(transform.position, rayDirection, Color.green);
+                //Debug.DrawRay(transform.position, rayDirection, Color.green);
                 return true;
             }
         }
@@ -123,6 +124,14 @@ public class RaycastEnemy : MonoBehaviour
             fpsCounter = 0f;
         }
 
+    }
+
+    IEnumerator ReturnToStartAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        // Code to execute after the delay
+        GameSceneManager.Instance.ResetFloor();
     }
 
 }
