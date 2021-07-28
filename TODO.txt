@@ -57,6 +57,8 @@
 known bugs:
 raycast enemy takes about 0.5 to trigger sound
 -raycast enemy hit box is a bit wonky
--enemies with arrive pattern tend to ovelap when chasing together
+-enemies with arrive pattern tend to ovelap when chasing together *fixed*
 -some collisions create too much force and an object drops out of field
--
+-on build, hinge objects do not swing as much
+-lod turtle animation not working on build
+-turtle rotation is diffrent between build and editor

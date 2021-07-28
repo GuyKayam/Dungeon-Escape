@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 5236378633217444729, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236378633217444731, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
@@ -451,7 +451,7 @@ PrefabInstance:
     - target: {fileID: 5236378633998120632, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236378633998120634, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
@@ -471,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 5236378634029454461, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236378634305883656, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
@@ -486,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 5236378634305883657, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236378634305883659, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
@@ -526,7 +526,7 @@ PrefabInstance:
     - target: {fileID: 5236378634805792159, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236378634805792225, guid: fb0ecb9004e1d4d4b9bf71cb4ce95289,
         type: 3}
@@ -19846,7 +19846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2056812662
 Transform:
   m_ObjectHideFlags: 0
