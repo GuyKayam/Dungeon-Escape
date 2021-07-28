@@ -46,9 +46,7 @@
 
 היום:
 -לסדר 2 חדרים אחרונים
--לסדר את הRAYCASTENEMY
 -GDD
--סרטון על המשחק
 
 -סידור כתובות דינאמיות *
 -לסדר חדר בוס* + הינג'
@@ -62,3 +60,4 @@ raycast enemy takes about 0.5 to trigger sound
 -on build, hinge objects do not swing as much
 -lod turtle animation not working on build
 -turtle rotation is diffrent between build and editor
+-bombs overlapping with player, only visually.

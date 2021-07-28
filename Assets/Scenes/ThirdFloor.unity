@@ -20384,7 +20384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f136cccefb2c7474583ffb8c4392fff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 10
+  startHealth: 80
 --- !u!114 &2118738392
 MonoBehaviour:
   m_ObjectHideFlags: 0
