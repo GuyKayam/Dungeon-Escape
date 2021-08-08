@@ -26,7 +26,8 @@ public class GameSceneManager : AutoCleanUpSingleton<GameSceneManager>
 
     public void ResetFloor()
     {
-        Application.LoadLevel(Application.loadedLevel);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 

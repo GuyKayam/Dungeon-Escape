@@ -2821,6 +2821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327265488}
   - component: {fileID: 327265489}
+  - component: {fileID: 327265490}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -2853,10 +2854,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ff48ff1657385534f810d373932368a8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2938,6 +2939,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &327265490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327265487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2946618067b3530419aca38b30da8296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &333994025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19539,6 +19552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 793158111326443867, guid: 9875d3c4f6cd1e549ba78342eca0d1d9,
+        type: 3}
+      propertyPath: attackDamage
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5647058003108480143, guid: 9875d3c4f6cd1e549ba78342eca0d1d9,
         type: 3}

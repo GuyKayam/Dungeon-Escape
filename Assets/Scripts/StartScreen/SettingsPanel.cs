@@ -7,47 +7,59 @@ using UnityEngine.UI;
 
 public class SettingsPanel : MonoBehaviour
 {
-    bool isAudioPlaying=false;
+
+    #region Private Varibles
+    bool isAudioPlaying = false;
+    #endregion
+
+
+    #region SerializeField
     [SerializeField]
     AudioSource audioSource;
+
     [SerializeField]
     Text audioBtnText;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-    public void ChangeAudioState()
+    [SerializeField]
+    Slider soundVolumeSlider;
+    #endregion
+
+
+    #region Methods
+    private void Awake()
     {
-        if (isAudioPlaying)
+     if(SoundManager.Instance.IsPlayingMusic)
         {
-            isAudioPlaying = false;
-            audioSource.Pause();
-            audioBtnText.text = "Sound OFF";
+            audioBtnText.text = "Sound ON";
         }
         else
         {
-            isAudioPlaying = true;
-            audioSource.PlayDelayed(0.5f);
-            audioBtnText.text = "Sound ON";
+            audioBtnText.text = "Sound OFF";
+        }
+        soundVolumeSlider.value = SoundManager.Instance.MusicVolume;
+    }
 
+
+    public void ChangeAudioState()
+    {
+       if(SoundManager.Instance.ChangeMusicState())
+        {
+            audioBtnText.text = "Sound ON";
+        }
+        else
+        {
+            audioBtnText.text = "Sound OFF";
         }
     }
 
 
-
-
-
-    public void ChangeVolume(Slider slider)
+    public void ChangeVolumeCalled(Slider slider)
     {
-        audioSource.volume = slider.value;
-        
-    }
+        SoundManager.Instance.ChangeMusicVolume(slider.value);
+    } 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
+    #endregion
+
 }

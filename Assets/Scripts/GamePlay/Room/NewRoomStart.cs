@@ -32,6 +32,8 @@ public class NewRoomStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Animator SpotLightAnimator = PlayerReference.instance.transform.GetChild(3).GetComponent<Animator>();
+        //SpotLightAnimator.SetTrigger("BackToNormal");
         room = transform.parent.gameObject;
         if (room.transform.childCount > 0)
         {
@@ -49,7 +51,7 @@ public class NewRoomStart : MonoBehaviour
         }
  
         checkRoomClearScript.SubscribeToDeathEvents(enemies);
-
+        //SpotLightAnimator.SetTrigger("BackToNormal");
     }
 
 
